@@ -15,3 +15,9 @@ position = Vector2(-4854, 1268)
 scale = Vector2(10, 10)
 
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
+[connection signal="body_entered" from="Submarine/Ladder Left" to="Player" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Submarine/Ladder Left" to="Player" method="_on_ladder_body_exited"]
+[connection signal="body_entered" from="Submarine/Ladder Right" to="Player" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Submarine/Ladder Right" to="Player" method="_on_ladder_body_exited"]
+
+[editable path="Submarine"]
