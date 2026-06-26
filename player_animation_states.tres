@@ -1,0 +1,62 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://me7xslt3tcc1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_onrkg"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_flfj2"]
+animation = &"kick"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i3pqv"]
+animation = &"sit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hqtel"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2hs0m"]
+advance_mode = 2
+advance_expression = "velocity.x"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1jxqw"]
+advance_mode = 2
+advance_expression = "!velocity.x"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dw050"]
+advance_mode = 2
+advance_expression = "sit"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b26j0"]
+advance_mode = 2
+advance_expression = "velocity.x"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i3pqv"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7ecmx"]
+advance_mode = 2
+advance_expression = "use"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kq356"]
+advance_mode = 2
+advance_expression = "use"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m6ti2"]
+advance_mode = 2
+advance_expression = "use"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qjthx"]
+switch_mode = 2
+advance_mode = 2
+
+[resource]
+states/End/position = Vector2(804, 70)
+states/Start/position = Vector2(804, 136)
+states/idle/node = SubResource("AnimationNodeAnimation_onrkg")
+states/idle/position = Vector2(424, 136)
+states/kick/node = SubResource("AnimationNodeAnimation_flfj2")
+states/kick/position = Vector2(549, 230)
+states/sit/node = SubResource("AnimationNodeAnimation_i3pqv")
+states/sit/position = Vector2(556, 41)
+states/walk/node = SubResource("AnimationNodeAnimation_hqtel")
+states/walk/position = Vector2(661, 136)
+transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_2hs0m"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_1jxqw"), "idle", "sit", SubResource("AnimationNodeStateMachineTransition_dw050"), "sit", "walk", SubResource("AnimationNodeStateMachineTransition_b26j0"), "Start", "walk", SubResource("AnimationNodeStateMachineTransition_i3pqv"), "idle", "kick", SubResource("AnimationNodeStateMachineTransition_7ecmx"), "sit", "kick", SubResource("AnimationNodeStateMachineTransition_kq356"), "walk", "kick", SubResource("AnimationNodeStateMachineTransition_m6ti2"), "kick", "walk", SubResource("AnimationNodeStateMachineTransition_qjthx")]
+graph_offset = Vector2(76, 22)
