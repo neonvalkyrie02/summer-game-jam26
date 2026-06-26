@@ -5,14 +5,14 @@
 [ext_resource type="AnimationNodeStateMachine" uid="uid://me7xslt3tcc1" path="res://player_animation_states.tres" id="3_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fmfn"]
-size = Vector2(111.25, 169.01666)
+size = Vector2(104, 169.01666)
 
 [sub_resource type="Animation" id="Animation_onrkg"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -30,7 +30,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -47,7 +47,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +62,7 @@ resource_name = "sit"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -70,6 +70,24 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [40, 41]
+}
+
+[sub_resource type="Animation" id="Animation_1jxqw"]
+resource_name = "sprint"
+length = 0.39999999999999997
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
 }
 
 [sub_resource type="Animation" id="Animation_i3pqv"]
@@ -80,7 +98,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("PlayerSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -96,6 +114,7 @@ _data = {
 &"idle": SubResource("Animation_hqtel"),
 &"kick": SubResource("Animation_2hs0m"),
 &"sit": SubResource("Animation_sweqy"),
+&"sprint": SubResource("Animation_1jxqw"),
 &"walk": SubResource("Animation_i3pqv")
 }
 
@@ -103,13 +122,13 @@ _data = {
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=343886040]
-position = Vector2(53.375, -81.49167)
+position = Vector2(57, -81.49167)
 shape = SubResource("RectangleShape2D_5fmfn")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=420452329]
 position = Vector2(90, -236)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1068523347]
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1068523347]
 position = Vector2(56, -114.99999)
 scale = Vector2(9.8, 9.8)
 texture = ExtResource("1_4flbx")

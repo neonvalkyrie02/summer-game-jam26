@@ -1,24 +1,14 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_0xm2m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fmfn"]
-size = Vector2(130.01575, 122.10527)
+[ext_resource type="PackedScene" uid="uid://c7vmqka4aaflo" path="res://submarine.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node" unique_id=1265064031]
 
 [node name="Player" parent="." unique_id=578066036 instance=ExtResource("1_ig7tw")]
+position = Vector2(152, 298)
 
-[node name="Floor" type="Sprite2D" parent="." unique_id=828924094]
-position = Vector2(554.49994, 384.5)
-scale = Vector2(8.6640625, 0.88281256)
-texture = ExtResource("2_0xm2m")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Floor" unique_id=148216941]
-scale = Vector2(1, 0.99999994)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1549611813]
-position = Vector2(-1.0078735, 2.1052856)
-scale = Vector2(1.0000001, 0.9999999)
-shape = SubResource("RectangleShape2D_5fmfn")
+[node name="Submarine" parent="." unique_id=129629463 instance=ExtResource("2_0xm2m")]
+z_index = -1
+position = Vector2(-4854, 1268)
+scale = Vector2(10, 10)
