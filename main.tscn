@@ -12,3 +12,10 @@ position = Vector2(152, 298)
 z_index = -1
 position = Vector2(-4854, 1268)
 scale = Vector2(10, 10)
+
+[connection signal="body_entered" from="Submarine/Ladder Left" to="Player" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Submarine/Ladder Left" to="Player" method="_on_ladder_body_exited"]
+[connection signal="body_entered" from="Submarine/Ladder Right" to="Player" method="_on_ladder_body_entered"]
+[connection signal="body_exited" from="Submarine/Ladder Right" to="Player" method="_on_ladder_body_exited"]
+
+[editable path="Submarine"]
