@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bel52ngo32ywy"]
+
+[ext_resource type="Script" uid="uid://rhuetwqa1e1p" path="res://hud/inventory_slot.gd" id="1_xhe5c"]
+
+[node name="InventorySlot" type="Control" unique_id=2124773255]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xhe5c")
+
+[node name="Label" type="Label" parent="." unique_id=84479966]
+z_index = 18
+custom_minimum_size = Vector2(0.14, 0.475)
+layout_mode = 1
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 115.0
+offset_bottom = 119.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.75070226, 0.7449733, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.3764706, 0.02745098, 0.45490196, 1)
+theme_override_colors/font_outline_color = Color(1.0146004, 0.30165726, 1.0888654, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 7
+text = "-"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1523166441]
+propagate_maximum_size = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

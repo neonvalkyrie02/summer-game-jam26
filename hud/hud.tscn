@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dvewtmm6d837k"]
+
+[ext_resource type="PackedScene" uid="uid://bel52ngo32ywy" path="res://hud/InventorySlot.tscn" id="1_6ca3a"]
+[ext_resource type="Texture2D" uid="uid://cr2qj0k6kdrv4" path="res://assets/icons/metal_plate_icon.png" id="2_2gk58"]
+[ext_resource type="Texture2D" uid="uid://kv226fbte8jd" path="res://assets/icons/metal_sheet_selected.png" id="2_318vg"]
+[ext_resource type="Texture2D" uid="uid://dm5sc3f4vqob4" path="res://assets/icons/wire_selected.png" id="4_0ivg5"]
+[ext_resource type="Texture2D" uid="uid://7hwu45uw45jb" path="res://assets/icons/wire.png" id="5_1kkc0"]
+[ext_resource type="Texture2D" uid="uid://c0fcefwhnc7lo" path="res://assets/icons/coil_selected.png" id="6_qv4qp"]
+[ext_resource type="Texture2D" uid="uid://bwp47ghce7ikg" path="res://assets/icons/coil_icon.png" id="7_sh35x"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1829554576]
+
+[node name="CoilsSlot" parent="." unique_id=1597618601 instance=ExtResource("1_6ca3a")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 576.0
+offset_top = 608.0
+offset_right = -654.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.504)
+SLOT_SELECTION = 2
+SELECTED_TEXTURE = ExtResource("6_qv4qp")
+UNSELECTED_TEXTURE = ExtResource("7_sh35x")
+
+[node name="WiresSlot" parent="." unique_id=2124773255 instance=ExtResource("1_6ca3a")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 488.0
+offset_top = 607.99994
+offset_right = -742.0
+offset_bottom = -62.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.504)
+SELECTED_TEXTURE = ExtResource("4_0ivg5")
+UNSELECTED_TEXTURE = ExtResource("5_1kkc0")
+
+[node name="MetalPlatesSlot" parent="." unique_id=1014078126 instance=ExtResource("1_6ca3a")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 672.0
+offset_top = 607.99994
+offset_right = -558.0
+offset_bottom = -62.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.504)
+SLOT_SELECTION = 1
+SELECTED_TEXTURE = ExtResource("2_318vg")
+UNSELECTED_TEXTURE = ExtResource("2_2gk58")
