@@ -12,6 +12,7 @@ Credits
 |Luis Zuno (@ansimuz)|CC-BY-3.0 | Underwater Background|https://opengameart.org/content/underwater-fantasy|   |
 |stevePH154|CC-BY-3.0|missile Sprite|https://opengameart.org/content/custom-missiles||
 |Reactorcore|CC0|Reactor|https://opengameart.org/content/core-reactor-machines||
+|nerijs|CC-BY-SA 4.0|Chest|https://opengameart.org/content/lots-of-chests||
 
 
 Resources for Rooms:

@@ -2,7 +2,6 @@ extends CharacterBody2D
 @onready var _animation_tree = $AnimationTree
 
 signal use_torpedos
-signal use_leakage
 
 const SPEED = 300.0
 const SPRINT = 1000.0
@@ -57,9 +56,8 @@ func _physics_process(delta: float) -> void:
 		use = true
 		if at_torpedo:
 			emit_signal("use_torpedos")
-		if at_leak:
-			emit_signal("use_leakage")
-		
+		get_tree().call_group("leaks", "use_leakage")
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")

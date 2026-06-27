@@ -9,15 +9,15 @@
 
 [sub_resource type="Curve2D" id="Curve2D_7mycd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1361, 368, 0, 0, 0, 0, 2036, 197, 0, 0, 0, 0, 2645, 405, 0, 0, 0, 0, 3628, 381, 0, 0, 0, 0, 3929, 111, 0, 0, 0, 0, 2215, -112, 0, 0, 0, 0, 949, 252, 0, 0, 0, 0, 1185, 954, 0, 0, 0, 0, 3346, 926, 0, 0, 0, 0, 4194, 306, 0, 0, 0, 0, 1361, 368)
+"points": PackedVector2Array(0, 0, 0, 0, 2018, 327, 0, 0, 0, 0, 3628, 381, 0, 0, 0, 0, 2848, 249, 0, 0, 0, 0, 2377, 221, 0, 0, 0, 0, 949, 252, 0, 0, 0, 0, 1818, 339, 0, 0, 0, 0, 2018, 327)
 }
-point_count = 11
+point_count = 7
 
 [node name="Main" type="Node" unique_id=1265064031]
 script = ExtResource("1_7mycd")
 Leakage = ExtResource("5_lquwl")
 
-[node name="Player" parent="." unique_id=578066036 groups=["player"] instance=ExtResource("1_ig7tw")]
+[node name="Player" parent="." unique_id=578066036 groups=["leaks", "player"] instance=ExtResource("1_ig7tw")]
 z_index = 5
 position = Vector2(233, 460)
 
@@ -50,10 +50,11 @@ region_rect = Rect2(0, 0, 512, 192)
 curve = SubResource("Curve2D_7mycd")
 
 [node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath" unique_id=1375366474]
-position = Vector2(1361, 368)
-rotation = -0.24811345
+position = Vector2(2018, 327)
+rotation = 0.033527803
 
 [node name="LeakTimer" type="Timer" parent="." unique_id=1499165825]
+wait_time = 2.0
 autostart = true
 
 [connection signal="use_torpedos" from="Player" to="Submarine/Torpedo Machine" method="_on_player_use_torpedos"]
