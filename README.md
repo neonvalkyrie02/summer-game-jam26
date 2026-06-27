@@ -11,7 +11,7 @@ Credits
 | Penzilla Design | Royalty Free for personal projects | Animation Sprite | "Based on graphics by Penzilla Design" | https://penzilla.itch.io/protagonist-character |
 |Luis Zuno (@ansimuz)|CC-BY-3.0 | Underwater Background|https://opengameart.org/content/underwater-fantasy|   |
 |stevePH154|CC-BY-3.0|missile Sprite|https://opengameart.org/content/custom-missiles||
-||||||
+|Reactorcore|CC0|Reactor|https://opengameart.org/content/core-reactor-machines||
 
 
 Resources for Rooms:
