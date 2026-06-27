@@ -24,3 +24,12 @@ Repair water leakage minigame
 
 KONTAKTDATEN LEV: 
 	- lvishe IM DISCORD
+
+Ergebnisse von Nacht 26.06 -> 27.06:
+- Ich habe ladders gefixed/refactored -> sie funktionieren jetzt viel besser
+- Es gibt jetzt ein funktionierendes Inventory system 
+- Es ist mir nicht gelungen die AMBIZIONIERTE PLANe mit circuits zu machen - ich hab zu lang fuck arounded während der Nacht:( 
+- NEUE IDEE FÜR MECHANIK: WENN die Enemies erfolg haben (nicht rechtzeitig erschossen) kommen sie rein und man muss gegen sie kämpfen inside von Submarine. Man kann Teile Essen, um Temporäre Bonuse zu kriegen (Zum beispiel essen von Kabeln machts schneller oder mehr DAMAGE)
+WAS KÖNNEN WIR JETZT MACHEN?
+- Aber ich habe viel ÜBER GODOT GELERNT - meine PRODUKTIVITÄT wird steigen :) 
+- ICh will trotzdem versuchen originelle Ziele zu erreichen - ich werde jetzt so lange wie möglich schlaffen und dann eine Kochschicht machen und danach werde ich wahrscheinlich nonstop Arbeiten bis wir das Spiel fertig kriegen :=)
