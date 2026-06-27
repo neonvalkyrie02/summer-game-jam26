@@ -1,0 +1,504 @@
+[gd_scene format=3 uid="uid://i4k7eni3iq7v"]
+
+[ext_resource type="Texture2D" uid="uid://cct2dw5a8t4vk" path="res://assets/torpedo.png" id="1_ch1v4"]
+[ext_resource type="Script" uid="uid://bl178bxw01y05" path="res://torpedo.gd" id="2_uxf5w"]
+[ext_resource type="Texture2D" uid="uid://hidwmwl3t17j" path="res://assets/RC Art - Core Machines/Sprites/Cores ABC Anim Frames/Core_B_1_open.png" id="3_7xtdt"]
+[ext_resource type="Texture2D" uid="uid://wo8jiboarocu" path="res://assets/RC Art - Core Machines/Sprites/Cores ABC Anim Frames/Core_B_1_blackcenter.png" id="4_ongux"]
+[ext_resource type="Texture2D" uid="uid://cjbrqvgxkdqim" path="res://assets/RC Art - Core Machines/Sprites/Cores ABC Anim Frames/Core_B_TopRight.png" id="5_gs7b2"]
+[ext_resource type="Texture2D" uid="uid://7ad1074vx0na" path="res://assets/RC Art - Core Machines/Sprites/Cores ABC Anim Frames/Core_B_BottomRight.png" id="6_f4ydo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fmfn"]
+
+[sub_resource type="Animation" id="Animation_ongux"]
+resource_name = "Hatch Open"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hatch/topLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-6, -6), Vector2(-11, -11)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hatch/botLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-6, 6), Vector2(-11, 11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hatch/botRight:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(11, 11)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hatch/topRight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, -6), Vector2(11, -11)]
+}
+
+[sub_resource type="Animation" id="Animation_f4ydo"]
+resource_name = "Hatch close"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hatch/topLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, -11), Vector2(-6, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hatch/botLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, 11), Vector2(-6, 6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hatch/botRight:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(11, 11), Vector2(6, 6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hatch/topRight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(11, -11), Vector2(6, -6)]
+}
+
+[sub_resource type="Animation" id="Animation_7xtdt"]
+resource_name = "Load Torpedo1"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torpedo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, 0), Vector2(23, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torpedo:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torpedo:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1480403, 0.2),
+"transitions": PackedFloat32Array(3.6050022, 1, 1),
+"update": 0,
+"values": [Rect2(0, 1, 4, 18), Rect2(0, 1, 4, 18), Rect2(0, 7, 4, 12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hatch/topLeft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -11)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hatch/topRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, -11)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hatch/botRight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 11)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hatch/botLeft:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 11)]
+}
+
+[sub_resource type="Animation" id="Animation_gs7b2"]
+resource_name = "Load Torpedo2"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torpedo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(23, 0), Vector2(29.470675, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torpedo:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torpedo:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Rect2(0, 7, 4, 12), Rect2(0, 19, 4, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hatch/topLeft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -11)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hatch/topRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, -11)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hatch/botRight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 11)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hatch/botLeft:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 11)]
+}
+
+[sub_resource type="Animation" id="Animation_obqh4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torpedo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torpedo:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torpedo:region_rect")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 1, 4, 18)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hatch/topLeft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6, -6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hatch/botLeft:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6, 6)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hatch/botRight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hatch/topRight:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, -6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gs7b2"]
+_data = {
+&"Hatch Open": SubResource("Animation_ongux"),
+&"Hatch close": SubResource("Animation_f4ydo"),
+&"Load Torpedo1": SubResource("Animation_7xtdt"),
+&"Load Torpedo2": SubResource("Animation_gs7b2"),
+&"RESET": SubResource("Animation_obqh4")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gs7b2"]
+animation = &"Hatch Open"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f4ydo"]
+animation = &"Hatch close"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7xtdt"]
+animation = &"Load Torpedo1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ongux"]
+animation = &"Load Torpedo2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_obqh4"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gs7b2"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e4vws"]
+advance_mode = 2
+advance_expression = "torpedo_step==3
+"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f4ydo"]
+advance_mode = 2
+advance_expression = "torpedo_step == 1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gvges"]
+advance_mode = 2
+advance_expression = "torpedo_step == 2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jgctd"]
+advance_mode = 2
+advance_expression = "torpedo_step==4
+"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j4bj8"]
+advance_mode = 2
+advance_expression = "torpedo_step==0
+"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7xtdt"]
+"states/Hatch Open/node" = SubResource("AnimationNodeAnimation_gs7b2")
+"states/Hatch Open/position" = Vector2(465, 178)
+"states/Hatch close/node" = SubResource("AnimationNodeAnimation_f4ydo")
+"states/Hatch close/position" = Vector2(401, 29)
+"states/Load Torpedo1/node" = SubResource("AnimationNodeAnimation_7xtdt")
+"states/Load Torpedo1/position" = Vector2(635, 150)
+"states/Load Torpedo2/node" = SubResource("AnimationNodeAnimation_ongux")
+"states/Load Torpedo2/position" = Vector2(572, 45)
+states/RESET/node = SubResource("AnimationNodeAnimation_obqh4")
+states/RESET/position = Vector2(384, 100)
+states/Start/position = Vector2(161, 95)
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_gs7b2"), "Load Torpedo1", "Load Torpedo2", SubResource("AnimationNodeStateMachineTransition_e4vws"), "RESET", "Hatch Open", SubResource("AnimationNodeStateMachineTransition_f4ydo"), "Hatch Open", "Load Torpedo1", SubResource("AnimationNodeStateMachineTransition_gvges"), "Load Torpedo2", "Hatch close", SubResource("AnimationNodeStateMachineTransition_jgctd"), "Hatch close", "RESET", SubResource("AnimationNodeStateMachineTransition_j4bj8")]
+
+[node name="Torpedo Machine" type="Node2D" unique_id=472259958]
+script = ExtResource("2_uxf5w")
+
+[node name="Torpedo" type="Sprite2D" parent="." unique_id=1369947211]
+z_index = 1
+position = Vector2(10, 0)
+rotation = 1.5707964
+texture = ExtResource("1_ch1v4")
+region_rect = Rect2(0, 1, 4, 18)
+
+[node name="Area2D" type="Area2D" parent="Torpedo" unique_id=2132021726]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torpedo/Area2D" unique_id=1685314879]
+position = Vector2(7, 1)
+shape = SubResource("RectangleShape2D_5fmfn")
+
+[node name="Hatch" type="Sprite2D" parent="." unique_id=1055918012]
+z_index = 2
+position = Vector2(40, 0)
+texture = ExtResource("3_7xtdt")
+
+[node name="Black" type="Sprite2D" parent="Hatch" unique_id=1764771284]
+z_index = -1
+position = Vector2(0, 1)
+texture = ExtResource("4_ongux")
+
+[node name="topRight" type="Sprite2D" parent="Hatch" unique_id=1953382676]
+z_index = -1
+position = Vector2(6, -6)
+texture = ExtResource("5_gs7b2")
+
+[node name="topLeft" type="Sprite2D" parent="Hatch" unique_id=925222883]
+z_index = -1
+position = Vector2(-6, -6)
+rotation = -1.5707964
+texture = ExtResource("5_gs7b2")
+
+[node name="botRight" type="Sprite2D" parent="Hatch" unique_id=1063711700]
+z_index = -1
+position = Vector2(6, 6)
+texture = ExtResource("6_f4ydo")
+
+[node name="botLeft" type="Sprite2D" parent="Hatch" unique_id=682167315]
+z_index = -1
+position = Vector2(-6, 6)
+rotation = 1.5707964
+texture = ExtResource("6_f4ydo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=602852346]
+libraries/ = SubResource("AnimationLibrary_gs7b2")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=757459724]
+tree_root = SubResource("AnimationNodeStateMachine_7xtdt")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="body_entered" from="Torpedo/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Torpedo/Area2D" to="." method="_on_area_2d_body_exited"]

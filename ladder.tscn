@@ -19,4 +19,4 @@ position = Vector2(0, -2.3909488)
 shape = SubResource("RectangleShape2D_h1pie")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_shape_exited" from="Area2D" to="." method="_on_area_2d_body_shape_exited"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
