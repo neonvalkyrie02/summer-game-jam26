@@ -33,3 +33,9 @@ Ergebnisse von Nacht 26.06 -> 27.06:
 WAS KÖNNEN WIR JETZT MACHEN?
 - Aber ich habe viel ÜBER GODOT GELERNT - meine PRODUKTIVITÄT wird steigen :) 
 - ICh will trotzdem versuchen originelle Ziele zu erreichen - ich werde jetzt so lange wie möglich schlaffen und dann eine Kochschicht machen und danach werde ich wahrscheinlich nonstop Arbeiten bis wir das Spiel fertig kriegen :=)
+# VORSCHLÄGE DARÜBER WAS MAN NOCH MACHEN KANN
+1. Nuclear reactor minigame
+2. Fighting system
+3. Meine schreckliche Icons nochmal malen damit es besser aussiet
+4. Ladders pollishen - sie sind zu 95% gefixed, aber es gibt jittering sometimes
+
