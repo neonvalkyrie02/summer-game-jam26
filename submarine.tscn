@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://56bffx5nw5rb" path="res://assets/Liam/Submarine.png" id="1_3uq8f"]
 [ext_resource type="PackedScene" uid="uid://c60fmh6v01fj1" path="res://ladder.tscn" id="2_k4f85"]
 [ext_resource type="Texture2D" uid="uid://dxiecrh78ceid" path="res://assets/Liam/Interior.png" id="2_qvldv"]
+[ext_resource type="PackedScene" uid="uid://i4k7eni3iq7v" path="res://torpedo.tscn" id="3_qvldv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fmfn"]
 size = Vector2(137, 6)
@@ -67,3 +68,6 @@ scale = Vector2(1.1, 1.25)
 [node name="Ladder2" parent="." unique_id=160112773 instance=ExtResource("2_k4f85")]
 position = Vector2(644, -67.00001)
 scale = Vector2(1.2499945, 1.4134619)
+
+[node name="Torpedo Machine" parent="." unique_id=472259958 instance=ExtResource("3_qvldv")]
+position = Vector2(801, -48)

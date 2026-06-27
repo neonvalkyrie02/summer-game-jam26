@@ -35,3 +35,7 @@ scale = Vector2(15, 15)
 texture = ExtResource("6_5vw27")
 region_enabled = true
 region_rect = Rect2(0, 0, 512, 192)
+
+[connection signal="use_torpedos" from="Player" to="Submarine/Torpedo Machine" method="_on_player_use_torpedos"]
+
+[editable path="Submarine"]
