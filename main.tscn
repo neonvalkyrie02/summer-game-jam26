@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c7vmqka4aaflo" path="res://submarine.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dvewtmm6d837k" path="res://hud/hud.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://d3q8tj6qyl73e" path="res://assets/underwater-fantasy-files/PNG/layers/far.png" id="6_5vw27"]
 
 [node name="Main" type="Node" unique_id=1265064031]
 
@@ -22,5 +23,21 @@ scale = Vector2(1.2300001, 1.3365386)
 position = Vector2(644.49994, -66.7)
 
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=195507895]
+z_index = -2
+position = Vector2(-2488, -1116)
+
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=2065898574]
+repeat_size = Vector2(3840, 0)
+autoscroll = Vector2(-200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D" unique_id=836510112]
+texture_repeat = 2
+position = Vector2(1920, 1440)
+scale = Vector2(15, 15)
+texture = ExtResource("6_5vw27")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 192)
 
 [editable path="Submarine"]
