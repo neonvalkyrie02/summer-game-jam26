@@ -126,7 +126,8 @@ position = Vector2(57, -81.49167)
 shape = SubResource("RectangleShape2D_5fmfn")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=420452329]
-position = Vector2(90, -236)
+position = Vector2(129, -432)
+zoom = Vector2(0.5, 0.5)
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1068523347]
 position = Vector2(56, -114.99999)
