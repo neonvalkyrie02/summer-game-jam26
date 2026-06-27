@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://rhuetwqa1e1p" path="res://hud/inventory_slot.gd" id="1_xhe5c"]
 
 [node name="InventorySlot" type="Control" unique_id=2124773255]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xhe5c")
 
 [node name="Label" type="Label" parent="." unique_id=84479966]
 z_index = 18
+z_as_relative = false
 custom_minimum_size = Vector2(0.14, 0.475)
 layout_mode = 1
 offset_left = 96.0
@@ -24,6 +26,8 @@ theme_override_constants/shadow_outline_size = 7
 text = "-"
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1523166441]
+z_index = -1
+z_as_relative = false
 propagate_maximum_size = true
 clip_contents = true
 layout_mode = 1

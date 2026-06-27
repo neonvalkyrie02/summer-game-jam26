@@ -14,6 +14,24 @@ var currentSlot = SlotSelectionState.WIRES
 var _amountWires:int = 10
 var _amountCoils:int = 10
 var _amountMetalPlates:int = 10
+var _speed_buff = false
+func getSpeedBuf():
+	return _speed_buff
+func _on_buff_timeout():
+	_speed_buff = false
+func eat():
+	# get current state
+	var val = getValueOfSlot(currentSlot)
+	if val == 0:
+		return
+	modifyCurrentSlot(-1)
+	_speed_buff = true
+	var timer = Timer.new()
+	timer.wait_time = 5.0
+	timer.one_shot = false
+	timer.timeout.connect(_on_buff_timeout)
+	add_child(timer)
+	timer.start()
 
 func getWires():
 	return _amountWires

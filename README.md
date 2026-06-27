@@ -38,4 +38,3 @@ WAS KÖNNEN WIR JETZT MACHEN?
 2. Fighting system
 3. Meine schreckliche Icons nochmal malen damit es besser aussiet
 4. Ladders pollishen - sie sind zu 95% gefixed, aber es gibt jittering sometimes
-

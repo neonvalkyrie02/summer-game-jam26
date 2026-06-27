@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const SPRINT = 1000.0
+const BUFFED = 4000.0
 
 const JUMP_VELOCITY = -400.0
 const LADDER_VELOCITY = -200.0
@@ -23,7 +24,7 @@ func _process(_delta:float):
 	if Input.is_action_just_released("key_3"):
 		GlobalPlayerState.selectNewSlot(GlobalPlayerState.SlotSelectionState.METAL_PLATES)
 	if Input.is_action_just_released("eat"):
-		GlobalPlayerState.modifyCurrentSlot(-1);
+		GlobalPlayerState.eat();
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor() and not on_ladder:
@@ -57,7 +58,10 @@ func _physics_process(delta: float) -> void:
 		$PlayerSprite.scale.x = abs($PlayerSprite.scale.x) * direction	
 		sit = false
 		if Input.is_action_pressed("action_sprint"):
-			velocity.x = direction * SPRINT
+			if GlobalPlayerState.getSpeedBuf():
+				velocity.x = direction * BUFFED
+			else: 
+				velocity.x = direction * SPRINT
 		else:
 			velocity.x = direction * SPEED 
 	else:
