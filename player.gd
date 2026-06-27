@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor() and not on_ladder:
 		velocity += get_gravity() * delta
-		set_collision_mask_value(1, true)
 
 
 	use = false
@@ -38,14 +37,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		sit = false
-		set_collision_mask_value(1, true)
-	if ladder_direction and on_ladder and is_on_floor():
-		set_collision_mask_value(1, true)
 
 	if ladder_direction and on_ladder:
 		position.y +=  LADDER_VELOCITY * -ladder_direction * delta
 		sit = false
-		set_collision_mask_value(1, false)
 
 		
 		

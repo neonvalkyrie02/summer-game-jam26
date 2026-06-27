@@ -15,11 +15,11 @@ position = Vector2(-4854, 1268)
 scale = Vector2(10, 10)
 
 [node name="Ladder" parent="Submarine" index="2" unique_id=39722444]
-position = Vector2(457.30008, -67.5)
+position = Vector2(376.9, -64.2)
 scale = Vector2(1.2300001, 1.3365386)
 
 [node name="Ladder2" parent="Submarine" index="3" unique_id=160112773]
-position = Vector2(685.99994, -70.1)
+position = Vector2(644.49994, -66.7)
 
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
 
