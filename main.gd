@@ -1,7 +1,12 @@
 extends Node
 
 @export var Leakage: PackedScene
+@export var watercurve: Curve = preload("res://watercurve.tres")
+
 var score
+var waterlevel = 0
+const PUMPSPEED = 2
+const WATERSPEED = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +15,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	waterlevel += get_tree().get_nodes_in_group("open_leaks").size()*WATERSPEED
+	waterlevel = move_toward(waterlevel, 0, PUMPSPEED)
+	if waterlevel > 1000: waterlevel=1000 
+	$Hud/ProgressBar.value = watercurve.sample(waterlevel)
 	pass
 
 

@@ -6,6 +6,7 @@ var leak_fixed = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("leaks")
+	add_to_group("open_leaks")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,5 +33,6 @@ func use_leakage() -> void:
 		else: 
 			GlobalPlayerState.setMetalPlates(metalplates-1)
 			leak_fixed=true
+			remove_from_group("open_leaks")
 	
 	

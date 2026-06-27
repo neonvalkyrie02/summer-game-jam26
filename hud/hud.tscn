@@ -53,3 +53,9 @@ scale = Vector2(0.5, 0.504)
 SLOT_SELECTION = 1
 SELECTED_TEXTURE = ExtResource("2_318vg")
 UNSELECTED_TEXTURE = ExtResource("2_2gk58")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1414743000]
+offset_left = 19.0
+offset_top = 42.0
+offset_right = 322.0
+offset_bottom = 69.0

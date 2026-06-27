@@ -15,7 +15,7 @@ var use = false
 var on_ladder = false
 var at_torpedo = false
 var at_leak = false
-
+var at_refill = false
 
 func _ready(): 
 	_animation_tree.set_active(true) 
@@ -57,6 +57,11 @@ func _physics_process(delta: float) -> void:
 		if at_torpedo:
 			emit_signal("use_torpedos")
 		get_tree().call_group("leaks", "use_leakage")
+		print(at_refill)
+		if at_refill:
+			GlobalPlayerState.setWires(10)
+			GlobalPlayerState.setCoils(10)
+			GlobalPlayerState.setMetalPlates(10)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
