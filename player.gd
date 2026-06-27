@@ -8,7 +8,7 @@ const SPRINT = 1000.0
 const BUFFED = 4000.0
 
 const JUMP_VELOCITY = -400.0
-const LADDER_VELOCITY = -200.0
+const LADDER_VELOCITY = -400.0
 
 var sit = false
 var use = false

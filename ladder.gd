@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -16,6 +16,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.on_ladder = true
 
 
-func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		body.on_ladder = false
