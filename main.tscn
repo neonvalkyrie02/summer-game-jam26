@@ -8,36 +8,30 @@
 [node name="Main" type="Node" unique_id=1265064031]
 
 [node name="Player" parent="." unique_id=578066036 groups=["player"] instance=ExtResource("1_ig7tw")]
-position = Vector2(152, 298)
+z_index = 5
+position = Vector2(233, 460)
 
 [node name="Submarine" parent="." unique_id=129629463 instance=ExtResource("2_0xm2m")]
-z_index = -1
-position = Vector2(-4854, 1268)
+position = Vector2(-4208, 1408.0001)
 scale = Vector2(10, 10)
-
-[node name="Ladder" parent="Submarine" index="2" unique_id=39722444]
-position = Vector2(376.9, -64.2)
-scale = Vector2(1.2300001, 1.3365386)
-
-[node name="Ladder2" parent="Submarine" index="3" unique_id=160112773]
-position = Vector2(644.49994, -66.7)
+metadata/_edit_lock_ = true
 
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=195507895]
+[node name="Background" type="Node2D" parent="." unique_id=195507895]
 z_index = -2
 position = Vector2(-2488, -1116)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=2065898574]
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=2065898574]
 repeat_size = Vector2(3840, 0)
 autoscroll = Vector2(-200, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D" unique_id=836510112]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=836510112]
 texture_repeat = 2
 position = Vector2(1920, 1440)
 scale = Vector2(15, 15)
 texture = ExtResource("6_5vw27")
 region_enabled = true
 region_rect = Rect2(0, 0, 512, 192)
-
-[editable path="Submarine"]
