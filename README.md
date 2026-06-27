@@ -9,8 +9,8 @@ Credits
 |Author|License|Asset|Credit|Link |
 |---|---|---|---|---|
 | Penzilla Design | Royalty Free for personal projects | Animation Sprite | "Based on graphics by Penzilla Design" | https://penzilla.itch.io/protagonist-character |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|Luis Zuno (@ansimuz)|CC-BY-3.0 | Underwater Background|https://opengameart.org/content/underwater-fantasy|   |
+||||||
 
 Resources for Rooms:
 	- Electric Motor
