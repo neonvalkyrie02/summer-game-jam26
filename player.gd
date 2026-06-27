@@ -15,7 +15,15 @@ var on_ladder = false
 func _ready(): 
 	_animation_tree.set_active(true) 
 	on_ladder = false
-
+func _process(_delta:float):
+	if Input.is_action_just_released("key_1"):
+		GlobalPlayerState.selectNewSlot(GlobalPlayerState.SlotSelectionState.WIRES)
+	if Input.is_action_just_released("key_2"):
+		GlobalPlayerState.selectNewSlot(GlobalPlayerState.SlotSelectionState.COILS)
+	if Input.is_action_just_released("key_3"):
+		GlobalPlayerState.selectNewSlot(GlobalPlayerState.SlotSelectionState.METAL_PLATES)
+	if Input.is_action_just_released("eat"):
+		GlobalPlayerState.modifyCurrentSlot(-1);
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor() and not on_ladder:
@@ -31,6 +39,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		sit = false
 		set_collision_mask_value(1, true)
+	if ladder_direction and on_ladder and is_on_floor():
+		set_collision_mask_value(1, true)
+
 	if ladder_direction and on_ladder:
 		position.y +=  LADDER_VELOCITY * -ladder_direction * delta
 		sit = false
@@ -56,6 +67,5 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * SPEED 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
 
 	move_and_slide()

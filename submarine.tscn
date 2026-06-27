@@ -56,9 +56,9 @@ position = Vector2(597, -159)
 shape = SubResource("RectangleShape2D_k4f85")
 
 [node name="Ladder" parent="." unique_id=39722444 instance=ExtResource("2_k4f85")]
-position = Vector2(544, -66)
+position = Vector2(506, -64)
 scale = Vector2(1.1, 1.25)
 
 [node name="Ladder2" parent="." unique_id=160112773 instance=ExtResource("2_k4f85")]
-position = Vector2(602.75, -131.25)
+position = Vector2(657, -68)
 scale = Vector2(1.2499945, 1.4134619)

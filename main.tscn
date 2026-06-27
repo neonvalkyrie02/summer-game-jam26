@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c7vmqka4aaflo" path="res://submarine.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dvewtmm6d837k" path="res://hud.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dvewtmm6d837k" path="res://hud/hud.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node" unique_id=1265064031]
 
@@ -15,11 +15,11 @@ position = Vector2(-4854, 1268)
 scale = Vector2(10, 10)
 
 [node name="Ladder" parent="Submarine" index="2" unique_id=39722444]
-position = Vector2(544.4, -68.5)
+position = Vector2(457.30008, -67.5)
 scale = Vector2(1.2300001, 1.3365386)
 
 [node name="Ladder2" parent="Submarine" index="3" unique_id=160112773]
-position = Vector2(640.9, -131.6)
+position = Vector2(685.99994, -70.1)
 
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
 
