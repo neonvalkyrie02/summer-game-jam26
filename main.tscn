@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://cljo0h54ukqrs" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c7vmqka4aaflo" path="res://submarine.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dvewtmm6d837k" path="res://hud/hud.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bs24bnu0ys7sl" path="res://Leakage.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://d3q8tj6qyl73e" path="res://assets/underwater-fantasy-files/PNG/layers/far.png" id="6_5vw27"]
 
+[sub_resource type="Curve2D" id="Curve2D_7mycd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1361, 368, 0, 0, 0, 0, 2036, 197, 0, 0, 0, 0, 2645, 405, 0, 0, 0, 0, 3628, 381, 0, 0, 0, 0, 3929, 111, 0, 0, 0, 0, 2215, -112, 0, 0, 0, 0, 949, 252, 0, 0, 0, 0, 1185, 954, 0, 0, 0, 0, 3346, 926, 0, 0, 0, 0, 4194, 306, 0, 0, 0, 0, 1361, 368)
+}
+point_count = 11
+
 [node name="Main" type="Node" unique_id=1265064031]
+script = ExtResource("1_7mycd")
+Leakage = ExtResource("5_lquwl")
 
 [node name="Player" parent="." unique_id=578066036 groups=["player"] instance=ExtResource("1_ig7tw")]
 z_index = 5
@@ -36,6 +46,17 @@ texture = ExtResource("6_5vw27")
 region_enabled = true
 region_rect = Rect2(0, 0, 512, 192)
 
+[node name="leakPath" type="Path2D" parent="." unique_id=1260157820]
+curve = SubResource("Curve2D_7mycd")
+
+[node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath" unique_id=1375366474]
+position = Vector2(1361, 368)
+rotation = -0.24811345
+
+[node name="LeakTimer" type="Timer" parent="." unique_id=1499165825]
+autostart = true
+
 [connection signal="use_torpedos" from="Player" to="Submarine/Torpedo Machine" method="_on_player_use_torpedos"]
+[connection signal="timeout" from="LeakTimer" to="." method="_on_leak_timer_timeout"]
 
 [editable path="Submarine"]
