@@ -468,6 +468,8 @@ states/RESET/position = Vector2(384, 100)
 states/Start/position = Vector2(161, 95)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_gs7b2"), "Load Torpedo1", "Load Torpedo2", SubResource("AnimationNodeStateMachineTransition_e4vws"), "RESET", "Hatch Open", SubResource("AnimationNodeStateMachineTransition_f4ydo"), "Hatch Open", "Load Torpedo1", SubResource("AnimationNodeStateMachineTransition_gvges"), "Load Torpedo2", "Hatch close", SubResource("AnimationNodeStateMachineTransition_jgctd"), "Hatch close", "RESET", SubResource("AnimationNodeStateMachineTransition_j4bj8")]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5fmfn"]
+
 [node name="Torpedo Machine" type="Node2D" unique_id=472259958]
 script = ExtResource("2_uxf5w")
 
@@ -527,6 +529,18 @@ anim_player = NodePath("../AnimationPlayer")
 [node name="ResupplyTimer" type="Timer" parent="." unique_id=1396305958]
 wait_time = 10.0
 one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=1445178]
+offset_left = -39.0
+offset_top = -18.0
+offset_right = 220.0
+offset_bottom = 83.0
+scale = Vector2(0.36, 0.36)
+text = "Kick(F) the torpedo 
+to fire it
+It will resupply 
+after a short while"
+label_settings = SubResource("LabelSettings_5fmfn")
 
 [connection signal="body_entered" from="Torpedo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Torpedo/Area2D" to="." method="_on_area_2d_body_exited"]

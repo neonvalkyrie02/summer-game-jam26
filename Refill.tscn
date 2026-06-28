@@ -20,5 +20,12 @@ region_rect = Rect2(664, 1184, 80, 64)
 position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_5fmfn")
 
+[node name="Label" type="Label" parent="." unique_id=1720273131]
+offset_left = -104.0
+offset_top = -81.0
+offset_right = 119.0
+offset_bottom = -58.0
+text = "Press F to resupply materials"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -76,3 +76,11 @@ position = Vector2(801, -48)
 [node name="Refill" parent="." unique_id=168944756 instance=ExtResource("5_a2b0v")]
 position = Vector2(601, -39)
 scale = Vector2(0.3, 0.3)
+
+[node name="Label" type="Label" parent="." unique_id=378214046]
+offset_left = 531.0
+offset_top = -121.0
+offset_right = 699.0
+offset_bottom = -98.0
+scale = Vector2(0.39999998, 0.39999998)
+text = "Press F to patch the holes"
