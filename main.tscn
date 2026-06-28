@@ -32,9 +32,6 @@ position = Vector2(-4208, 1408.0001)
 scale = Vector2(10, 10)
 metadata/_edit_lock_ = true
 
-[node name="Label" parent="Submarine" index="7" unique_id=378214046]
-mouse_filter = 1
-
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
 
 [node name="Background" type="Node2D" parent="." unique_id=195507895]

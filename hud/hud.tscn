@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0fcefwhnc7lo" path="res://assets/icons/coil_selected.png" id="6_qv4qp"]
 [ext_resource type="Texture2D" uid="uid://bwp47ghce7ikg" path="res://assets/icons/coil_icon.png" id="7_sh35x"]
 [ext_resource type="Script" uid="uid://ov666ayl2vmd" path="res://hud/scorelabel.gd" id="8_1kkc0"]
+[ext_resource type="Script" uid="uid://bj68i51540m5e" path="res://hud/sonar_state_label.gd" id="9_qv4qp"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1829554576]
 
@@ -77,3 +78,10 @@ offset_right = 85.0
 offset_bottom = 119.0
 text = "Score: 0"
 script = ExtResource("8_1kkc0")
+
+[node name="SonarState" type="Label" parent="." unique_id=788016003]
+offset_left = 21.0
+offset_top = 124.0
+offset_right = 61.0
+offset_bottom = 147.0
+script = ExtResource("9_qv4qp")

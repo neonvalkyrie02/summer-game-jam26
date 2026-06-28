@@ -22,7 +22,9 @@ func tick() -> void:
 			multiplier = 1
 		var newDirection = Vector2i(self.direction.x, abs(self.direction.y) * multiplier)
 		setDirection(newDirection)
-	if(cords.x > 57 or cords.x < 31):
+	if(cords.x > 55 or cords.x < 31):
+		if(cords.x > 55):
+			GlobalSonarState.addScore()
 		building.remove_child(self)
 		GlobalSonarState.removeNode(cords)
 		queue_free()

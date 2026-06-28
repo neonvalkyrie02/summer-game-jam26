@@ -6,7 +6,10 @@ var length: float # HOW FAR CAN SONAR SEE
 var angle: float # How big is the angle we can see # DEPENDS ON DIRECTION VARIABILITY
 var nodes: Dictionary[Vector2i, Node2D]  = {}
 var building: Node2D
+var score: int = 0
 signal tickSonar
+func addScore():
+	score+=1
 func _ready() -> void:
 	pass # Replace with function body.
 func addNode(cord: Vector2i, node: Node2D):
@@ -38,5 +41,7 @@ func getNode(cord: Vector2i) -> Node2D:
 		return null
 func tick(sonarBuild:Node2D):
 	building = sonarBuild
+	if(score > 0):
+		score-=1
 	emit_signal("tickSonar")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
