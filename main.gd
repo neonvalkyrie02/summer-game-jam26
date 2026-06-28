@@ -3,13 +3,15 @@ extends Node
 @export var Leakage: PackedScene
 @export var watercurve: Curve = preload("res://watercurve.tres")
 
-var score
+var score = 0
 var waterlevel = 0
 const PUMPSPEED = 2
 const WATERSPEED = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	score = 0
+	$Hud/GameOver.hide()
 	pass # Replace with function body.
 
 
@@ -19,8 +21,23 @@ func _process(_delta: float) -> void:
 	waterlevel = move_toward(waterlevel, 0, PUMPSPEED)
 	if waterlevel > 1000: waterlevel=1000 
 	$Hud/Waterlevel.value = watercurve.sample(waterlevel)
-	pass
+	if $Hud/Waterlevel.value == 100:
+		gameover()
 
+func gameover() -> void:
+	$ScoreTimer.stop()
+	$LeakTimer.stop()
+	$Hud/GameOver.show()
+	$Hud/GameOver/Label.text = "Game Over
+								Press Space to try again  
+								Score: %s" % score
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_accept") and $Hud/GameOver.visible:
+		# This restarts the current scene.
+		get_tree().reload_current_scene()
+	elif event.is_action_pressed("ui_accept"):
+		gameover()
 
 func _on_leak_timer_timeout() -> void:
 	print("Timer")
@@ -52,10 +69,12 @@ func spawn_leakage() -> void:
 
 
 func _on_score_timer_timeout() -> void:
-	$Hud/ScoreLabel._on_score_change(1)
+	score += 1
+	$Hud/ScoreLabel._on_score_change(score)
 	pass # Replace with function body.
 
 
 func _on_torpedo_machine_torpedo_fired() -> void:
-	$Hud/ScoreLabel._on_score_change(10)
+	score += 10
+	$Hud/ScoreLabel._on_score_change(score)
 	pass # Replace with function body.

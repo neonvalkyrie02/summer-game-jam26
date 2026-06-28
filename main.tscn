@@ -69,7 +69,7 @@ curve = SubResource("Curve2D_272bh")
 
 [node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath_debug" unique_id=863201756]
 position = Vector2(2903, 440)
-rotation = -2.8210285
+rotation = -2.8210282
 
 [node name="ScoreTimer" type="Timer" parent="." unique_id=1044949149]
 autostart = true

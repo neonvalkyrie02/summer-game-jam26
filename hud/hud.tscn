@@ -85,3 +85,27 @@ offset_top = 124.0
 offset_right = 61.0
 offset_bottom = 147.0
 script = ExtResource("9_qv4qp")
+
+[node name="GameOver" type="ColorRect" parent="." unique_id=1455282174]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 0.57254905)
+
+[node name="Label" type="Label" parent="GameOver" unique_id=1351646868]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over
+Press Space to try again  
+Score: "
+horizontal_alignment = 1

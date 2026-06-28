@@ -3,9 +3,9 @@ extends CharacterBody2D
 
 signal use_torpedos
 
-const SPEED = 300.0
-const SPRINT = 1000.0
-const BUFFED = 4000.0
+const SPEED = 1000.0
+const SPRINT = 1300.0
+const BUFFED = 2000.0
 
 const JUMP_VELOCITY = -400.0
 const LADDER_VELOCITY = -400.0
