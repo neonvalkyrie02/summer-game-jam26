@@ -32,6 +32,9 @@ position = Vector2(-4208, 1408.0001)
 scale = Vector2(10, 10)
 metadata/_edit_lock_ = true
 
+[node name="Label" parent="Submarine" index="7" unique_id=378214046]
+mouse_filter = 1
+
 [node name="Hud" parent="." unique_id=1829554576 instance=ExtResource("3_h2yge")]
 
 [node name="Background" type="Node2D" parent="." unique_id=195507895]
@@ -69,7 +72,7 @@ curve = SubResource("Curve2D_272bh")
 
 [node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath_debug" unique_id=863201756]
 position = Vector2(2903, 440)
-rotation = -2.8210282
+rotation = -2.8210285
 
 [node name="ScoreTimer" type="Timer" parent="." unique_id=1044949149]
 autostart = true

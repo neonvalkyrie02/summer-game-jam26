@@ -4,11 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c60fmh6v01fj1" path="res://ladder.tscn" id="2_k4f85"]
 [ext_resource type="Texture2D" uid="uid://dxiecrh78ceid" path="res://assets/Liam/Interior.png" id="2_qvldv"]
 [ext_resource type="PackedScene" uid="uid://i4k7eni3iq7v" path="res://torpedo.tscn" id="3_qvldv"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://m8lcu7d5f68s" path="res://SonarBuilding.tscn" id="5_a2b0v"]
-=======
 [ext_resource type="PackedScene" uid="uid://kjovpel61ufp" path="res://Refill.tscn" id="5_a2b0v"]
->>>>>>> 37d6b1e20faea3eb255d15718365b2ac2f756ecb
+[ext_resource type="PackedScene" uid="uid://m8lcu7d5f68s" path="res://SonarBuilding.tscn" id="6_c2y6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fmfn"]
 size = Vector2(137, 6)
@@ -77,10 +74,6 @@ scale = Vector2(1.2499945, 1.4134619)
 [node name="Torpedo Machine" parent="." unique_id=472259958 instance=ExtResource("3_qvldv")]
 position = Vector2(801, -48)
 
-<<<<<<< HEAD
-[node name="SonarBuilding" parent="." unique_id=557970548 instance=ExtResource("5_a2b0v")]
-position = Vector2(-573, 698)
-=======
 [node name="Refill" parent="." unique_id=168944756 instance=ExtResource("5_a2b0v")]
 position = Vector2(601, -39)
 scale = Vector2(0.3, 0.3)
@@ -91,5 +84,9 @@ offset_top = -121.0
 offset_right = 699.0
 offset_bottom = -98.0
 scale = Vector2(0.39999998, 0.39999998)
+mouse_filter = 1
 text = "Press F to patch the holes"
->>>>>>> 37d6b1e20faea3eb255d15718365b2ac2f756ecb
+
+[node name="SonarBuilding" parent="." unique_id=557970548 instance=ExtResource("6_c2y6f")]
+position = Vector2(531, -121)
+scale = Vector2(0.39999998, 0.39999998)
