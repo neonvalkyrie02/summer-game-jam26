@@ -13,8 +13,7 @@ func addNode(cord: Vector2i, node: Node2D):
 	# and position
 	if nodes.has(cord):
 		return 
-	print("node added")
-	print(cord)
+
 	nodes[cord] = node
 
 func removeNode(cord:Vector2i):

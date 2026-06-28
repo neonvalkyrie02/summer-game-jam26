@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://m8lcu7d5f68s"]
+
+[ext_resource type="Script" uid="uid://c7rxl3qt63jux" path="res://sonar_building.gd" id="1_jc3lt"]
+
+[node name="SonarBuilding" type="Node2D" unique_id=557970548]
+process_mode = 3
+script = ExtResource("1_jc3lt")
+
+[node name="Timer" type="Timer" parent="." unique_id=2087282587]

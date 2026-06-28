@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c4csx0g6wdjoc"]
+
+[ext_resource type="Script" uid="uid://1k3656xq4u45" path="res://sonar_coil.gd" id="1_afo4r"]
+[ext_resource type="Texture2D" uid="uid://br5r3etpxmlc1" path="res://assets/sonar_coil.png" id="1_bvktl"]
+
+[node name="SonarCoil" type="Node2D" unique_id=1643466254 groups=["sonar_coil"]]
+script = ExtResource("1_afo4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1128210354]
+z_as_relative = false
+texture = ExtResource("1_bvktl")
