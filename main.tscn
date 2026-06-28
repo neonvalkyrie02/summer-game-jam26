@@ -9,9 +9,15 @@
 
 [sub_resource type="Curve2D" id="Curve2D_7mycd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2018, 327, 0, 0, 0, 0, 3628, 381, 0, 0, 0, 0, 2848, 249, 0, 0, 0, 0, 2377, 221, 0, 0, 0, 0, 949, 252, 0, 0, 0, 0, 1818, 339, 0, 0, 0, 0, 2018, 327)
+"points": PackedVector2Array(0, 0, 0, 0, 2903, 440, 0, 0, 0, 0, 4512, 408, 0, 0, 0, 0, 3835, 357, 0, 0, 0, 0, 1580, 372, 0, 0, 0, 0, 1343, 434, 0, 0, 0, 0, 1792, 410, 0, 0, 0, 0, 2078, 402, 0, 0, 0, 0, -12, 369, 0, 0, 0, 0, 1073, 419, 0, 0, 0, 0, 2903, 440)
 }
-point_count = 7
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_272bh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2903, 440, 0, 0, 0, 0, 2397, 272, 0, 0, 0, 0, 1561, 340, 0, 0, 0, 0, 1343, 434, 0, 0, 0, 0, 1909, 444, 0, 0, 0, 0, 2078, 402, 0, 0, 0, 0, 984, 361, 0, 0, 0, 0, 1073, 419, 0, 0, 0, 0, 2903, 440)
+}
+point_count = 9
 
 [node name="Main" type="Node" unique_id=1265064031]
 script = ExtResource("1_7mycd")
@@ -50,14 +56,27 @@ region_rect = Rect2(0, 0, 512, 192)
 curve = SubResource("Curve2D_7mycd")
 
 [node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath" unique_id=1375366474]
-position = Vector2(2018, 327)
-rotation = 0.033527803
+position = Vector2(2903, 440)
+rotation = -0.01988551
 
 [node name="LeakTimer" type="Timer" parent="." unique_id=1499165825]
-wait_time = 2.0
+wait_time = 5.0
+autostart = true
+
+[node name="leakPath_debug" type="Path2D" parent="." unique_id=67937980]
+visible = false
+curve = SubResource("Curve2D_272bh")
+
+[node name="leakSpawnLocation" type="PathFollow2D" parent="leakPath_debug" unique_id=863201756]
+position = Vector2(2903, 440)
+rotation = -2.8210282
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1044949149]
 autostart = true
 
 [connection signal="use_torpedos" from="Player" to="Submarine/Torpedo Machine" method="_on_player_use_torpedos"]
+[connection signal="torpedo_fired" from="Submarine/Torpedo Machine" to="." method="_on_torpedo_machine_torpedo_fired"]
 [connection signal="timeout" from="LeakTimer" to="." method="_on_leak_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 
 [editable path="Submarine"]

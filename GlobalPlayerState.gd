@@ -2,21 +2,22 @@ extends Node
 #  THIS SCRIPT SHOULD BE AUTOLOADED
 signal inventory_changed
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
- 
+
 enum SlotSelectionState {
 	WIRES,
 	METAL_PLATES,
 	COILS
 }
+
 var currentSlot = SlotSelectionState.WIRES
 var _amountWires:int = 10
 var _amountCoils:int = 10
 var _amountMetalPlates:int = 10
 var _speed_buff = false
-func getSpeedBuf():
-	return _speed_buff
+
+func _ready() -> void:
+	pass # Replace with function body.
+ 
 func _on_buff_timeout():
 	_speed_buff = false
 func eat():
@@ -33,30 +34,17 @@ func eat():
 	add_child(timer)
 	timer.start()
 
+# Getter
+func getSpeedBuf():
+	return _speed_buff
 func getWires():
 	return _amountWires
-
 func getCoils():
 	return _amountCoils
-
 func getMetalPlates():
 	return _amountMetalPlates
-func selectNewSlot(newSlot: SlotSelectionState):
-	currentSlot = newSlot # 
-	emit_signal("inventory_changed")
-func setCurrentSlotsValue(newValue: int):
-	match currentSlot:
-		SlotSelectionState.WIRES:
-			setWires(newValue)
-		SlotSelectionState.METAL_PLATES:
-			setMetalPlates(newValue)
-		SlotSelectionState.COILS:
-			setCoils(newValue)
-	
-func modifyCurrentSlot(difference: int):
-	setCurrentSlotsValue(getValueOfSlot(currentSlot)+ difference)
-	emit_signal("inventory_changed")
 
+#Setter
 func setWires(newWires: int):
 	_amountWires = newWires
 	emit_signal("inventory_changed")
@@ -66,7 +54,23 @@ func setCoils(newCoils: int):
 func setMetalPlates(newMetalPlates):
 	_amountMetalPlates = newMetalPlates
 	emit_signal("inventory_changed")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func selectNewSlot(newSlot: SlotSelectionState):
+	currentSlot = newSlot # 
+	emit_signal("inventory_changed")
+
+func setCurrentSlotsValue(newValue: int):
+	match currentSlot:
+		SlotSelectionState.WIRES:
+			setWires(newValue)
+		SlotSelectionState.METAL_PLATES:
+			setMetalPlates(newValue)
+		SlotSelectionState.COILS:
+			setCoils(newValue)
+
+func modifyCurrentSlot(difference: int):
+	setCurrentSlotsValue(getValueOfSlot(currentSlot)+ difference)
+	emit_signal("inventory_changed")
+
 func getValueOfSlot(slot: SlotSelectionState):
 	match slot:
 		SlotSelectionState.WIRES:

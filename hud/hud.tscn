@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7hwu45uw45jb" path="res://assets/icons/wire.png" id="5_1kkc0"]
 [ext_resource type="Texture2D" uid="uid://c0fcefwhnc7lo" path="res://assets/icons/coil_selected.png" id="6_qv4qp"]
 [ext_resource type="Texture2D" uid="uid://bwp47ghce7ikg" path="res://assets/icons/coil_icon.png" id="7_sh35x"]
+[ext_resource type="Script" uid="uid://ov666ayl2vmd" path="res://hud/scorelabel.gd" id="8_1kkc0"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1829554576]
 
@@ -53,3 +54,26 @@ scale = Vector2(0.5, 0.504)
 SLOT_SELECTION = 1
 SELECTED_TEXTURE = ExtResource("2_318vg")
 UNSELECTED_TEXTURE = ExtResource("2_2gk58")
+
+[node name="Waterlevel" type="ProgressBar" parent="." unique_id=1414743000]
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 327.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="Waterlevel" unique_id=801564981]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_top = 32.0
+offset_right = 83.0
+offset_bottom = 28.0
+text = "Waterlevel"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=552932502]
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 85.0
+offset_bottom = 119.0
+text = "Score: 0"
+script = ExtResource("8_1kkc0")

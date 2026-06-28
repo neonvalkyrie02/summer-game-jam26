@@ -31,8 +31,13 @@ window/stretch/aspect="expand"
 
 player="IF PLAYER THAN IN THIS GROUP"
 leaks=""
+<<<<<<< HEAD
 sonar_coil=""
 sonar_wave=""
+=======
+open_leaks=""
+fixed_leaks=""
+>>>>>>> 37d6b1e20faea3eb255d15718365b2ac2f756ecb
 
 [input]
 
