@@ -10,6 +10,7 @@ func _ready() -> void:
 	$TextureButton.texture_normal = UNSELECTED_TEXTURE
 	$TextureButton.z_index = -1
 	$Label.z_index = 100
+	updateInventory()
 
 func updateInventory():
 	if(GlobalPlayerState.currentSlot != SLOT_SELECTION):
