@@ -60,7 +60,7 @@ position = Vector2(2903, 440)
 rotation = -0.01988551
 
 [node name="LeakTimer" type="Timer" parent="." unique_id=1499165825]
-wait_time = 5.0
+wait_time = 10.0
 autostart = true
 
 [node name="leakPath_debug" type="Path2D" parent="." unique_id=67937980]
