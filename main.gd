@@ -24,8 +24,9 @@ func _process(_delta: float) -> void:
 
 func _on_leak_timer_timeout() -> void:
 	print("Timer")
-	for i in range(3):
-		spawn_leakage()
+	if $Hud/Waterlevel.value<90:
+		for i in range(3):
+			spawn_leakage()
 	pass # Replace with function body.
 
 func spawn_leakage() -> void:
@@ -52,4 +53,9 @@ func spawn_leakage() -> void:
 
 func _on_score_timer_timeout() -> void:
 	$Hud/ScoreLabel._on_score_change(1)
+	pass # Replace with function body.
+
+
+func _on_torpedo_machine_torpedo_fired() -> void:
+	$Hud/ScoreLabel._on_score_change(10)
 	pass # Replace with function body.

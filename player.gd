@@ -57,7 +57,6 @@ func _physics_process(delta: float) -> void:
 		if at_torpedo:
 			emit_signal("use_torpedos")
 		get_tree().call_group("leaks", "use_leakage")
-		print(at_refill)
 		if at_refill:
 			GlobalPlayerState.setWires(10)
 			GlobalPlayerState.setCoils(10)
