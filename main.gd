@@ -4,6 +4,7 @@ extends Node
 @export var watercurve: Curve = preload("res://watercurve.tres")
 
 var score = 0
+var seconds_survived = 0
 var waterlevel = 0
 const PUMPSPEED = 2
 const WATERSPEED = 1
@@ -29,8 +30,9 @@ func gameover() -> void:
 	$LeakTimer.stop()
 	$Hud/GameOver.show()
 	$Hud/GameOver/Label.text = "Game Over
-								Press Space to try again  
-								Score: %s" % score
+								Press Space to try again
+								Seconds survived: %s
+								Score: %s" % [seconds_survived, score]
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept") and $Hud/GameOver.visible:
@@ -69,7 +71,8 @@ func spawn_leakage() -> void:
 
 
 func _on_score_timer_timeout() -> void:
-	score += 1
+	seconds_survived += 1
+	score += pow(seconds_survived/6, 2)
 	$Hud/ScoreLabel._on_score_change(score)
 	pass # Replace with function body.
 

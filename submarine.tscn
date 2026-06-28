@@ -101,3 +101,12 @@ text = "Press F to patch the holes"
 [node name="SonarBuilding" parent="." unique_id=557970548 instance=ExtResource("6_c2y6f")]
 position = Vector2(531, -121)
 scale = Vector2(0.39999998, 0.39999998)
+
+[node name="Label2" type="Label" parent="." unique_id=498778080]
+offset_left = 739.0
+offset_top = -135.00002
+offset_right = 954.0
+offset_bottom = -60.000015
+scale = Vector2(0.25209263, 0.25209263)
+text = "Left click with coils to place sonar
+Sadly just visual :,("

@@ -13,7 +13,7 @@ func spawnWave(pos: Vector2i, directionVector: Vector2i):
 	add_child(wave)
 	wave.global_position = Vector2(pos.x * 100, pos.y*100)
 
-	wave.z_index = 100
+	wave.z_index = 90
 	wave.setDirection(directionVector)
 	GlobalSonarState.addNode(pos, wave)
 func _on_timeout():
@@ -25,13 +25,13 @@ func _unhandled_input(event):
 			if GlobalPlayerState.currentSlot == GlobalPlayerState.SlotSelectionState.COILS:
 				if(GlobalPlayerState.getCoils() > 0): 
 					GlobalPlayerState.modifyCurrentSlot(-1)
-					print("SOMETHING DETECTED")
+					#print("SOMETHING DETECTED")
 					var coil = preload("res://SonarCoil.tscn").instantiate()
 					add_child(coil)
 					var mouse_pos =  get_global_mouse_position()
 					coil.global_position = Vector2(round(mouse_pos.x/100)*100, round(mouse_pos.y/100)*100) 
 					GlobalSonarState.addNode(Vector2i(round(mouse_pos.x/100), round(mouse_pos.y/100)), coil)
-					print(mouse_pos)
+					#print(mouse_pos)
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if GlobalPlayerState.currentSlot == GlobalPlayerState.SlotSelectionState.COILS:
 					var mouse_pos =  get_global_mouse_position()
