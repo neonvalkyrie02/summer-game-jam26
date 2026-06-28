@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalPlayerState="*uid://cl73ilpoxkofp"
+GlobalSonarState="*uid://o10om8vqgmr6"
 
 [display]
 
@@ -30,6 +31,8 @@ window/stretch/aspect="expand"
 
 player="IF PLAYER THAN IN THIS GROUP"
 leaks=""
+sonar_coil=""
+sonar_wave=""
 
 [input]
 
