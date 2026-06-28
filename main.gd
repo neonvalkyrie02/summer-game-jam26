@@ -24,7 +24,12 @@ func _process(_delta: float) -> void:
 
 func _on_leak_timer_timeout() -> void:
 	print("Timer")
-	# Create a new instance of the leak scene.
+	for i in range(3):
+		spawn_leakage()
+	pass # Replace with function body.
+
+func spawn_leakage() -> void:
+		# Create a new instance of the leak scene.
 	var leak = Leakage.instantiate()
 
 	# Choose a random location on Path2D.
@@ -43,4 +48,3 @@ func _on_leak_timer_timeout() -> void:
 
 	# Spawn the leak by adding it to the Main scene.
 	add_child(leak)
-	pass # Replace with function body.
