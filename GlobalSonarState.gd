@@ -5,6 +5,8 @@ extends Node
 var length: float # HOW FAR CAN SONAR SEE
 var angle: float # How big is the angle we can see # DEPENDS ON DIRECTION VARIABILITY
 var nodes: Dictionary[Vector2i, Node2D]  = {}
+var building: Node2D
+signal tickSonar
 func _ready() -> void:
 	pass # Replace with function body.
 func addNode(cord: Vector2i, node: Node2D):
@@ -17,22 +19,24 @@ func addNode(cord: Vector2i, node: Node2D):
 	nodes[cord] = node
 
 func removeNode(cord:Vector2i):
-	nodes.erase(cord)
+	var node = getNode(cord)
+	if(node):
+		nodes.erase(cord)
 func moveNode(oldCords: Vector2i, newCords: Vector2i):
 	# OR VECTOR 2D something -> IDK HOW TO DO IT CORRECTLY0
 	
-	if getNode(oldCords) == null and getNode(newCords) != null:
+	if !getNode(oldCords):
 		return # TODO: ERROR HANDLING THAT WORKS HERE
 	addNode(newCords, getNode(oldCords))
 	removeNode(oldCords)
 
 func getNode(cord: Vector2i) -> Node2D:
-	return nodes.get(cord)
+	var node = nodes.get(cord)
+	if(node):
+		return node
+	else:
+		return null
 func tick(sonarBuild:Node2D):
-	for key in nodes.keys():
-		if(nodes[key]):
-			nodes[key].tick(key, sonarBuild)
-
+	building = sonarBuild
+	emit_signal("tickSonar")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
