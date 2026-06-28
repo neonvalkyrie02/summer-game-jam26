@@ -71,7 +71,11 @@ curve = SubResource("Curve2D_272bh")
 position = Vector2(2903, 440)
 rotation = -2.8210282
 
+[node name="ScoreTimer" type="Timer" parent="." unique_id=1044949149]
+autostart = true
+
 [connection signal="use_torpedos" from="Player" to="Submarine/Torpedo Machine" method="_on_player_use_torpedos"]
 [connection signal="timeout" from="LeakTimer" to="." method="_on_leak_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 
 [editable path="Submarine"]

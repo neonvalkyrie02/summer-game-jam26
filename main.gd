@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 	waterlevel += get_tree().get_nodes_in_group("open_leaks").size()*WATERSPEED
 	waterlevel = move_toward(waterlevel, 0, PUMPSPEED)
 	if waterlevel > 1000: waterlevel=1000 
-	$Hud/ProgressBar.value = watercurve.sample(waterlevel)
+	$Hud/Waterlevel.value = watercurve.sample(waterlevel)
 	pass
 
 
@@ -48,3 +48,8 @@ func spawn_leakage() -> void:
 
 	# Spawn the leak by adding it to the Main scene.
 	add_child(leak)
+
+
+func _on_score_timer_timeout() -> void:
+	$Hud/ScoreLabel._on_score_change(1)
+	pass # Replace with function body.
