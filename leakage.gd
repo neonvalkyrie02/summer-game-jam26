@@ -2,7 +2,6 @@ extends Node2D
 
 var player_at_leak = false
 var leak_fixed = false
-@onready var Area = $Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,19 +16,19 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("Leak")
+	#print("Leak")
 	if(body.is_in_group("player")):
 		player_at_leak = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	print("NoLeak")
+	#print("NoLeak")
 	if(body.is_in_group("player")):
 		player_at_leak = false
 
 
 func use_leakage() -> void:
 	if player_at_leak: 
-		print("fixLeak")
+		#print("fixLeak")
 		var metalplates = GlobalPlayerState.getMetalPlates()
 		if metalplates==0: pass
 		else: 

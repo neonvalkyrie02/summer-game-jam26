@@ -14,12 +14,11 @@ func updateInventory():
 		texture_normal = UNSELECTED_TEXTURE
 	else:
 		texture_normal = SELECTED_TEXTURE
-
 	return
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-
 
 func _on_pressed() -> void:
 	# SELECT ACTIVE SLOT
